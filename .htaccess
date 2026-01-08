@@ -1,20 +1,26 @@
 RewriteEngine On
 
-# Removing pages from URL
-RewriteBase /
-RewriteCond %{REQUEST_URI} !^/pages/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ pages/$1 [L]
-
-# Remove index.html from any URL (e.g., domain.com -> domain.com)
-RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+########################################
+# 1. Remove index.html from homepage
+########################################
 RewriteRule ^index\.html$ / [R=301,L]
 
-# Remove .html extension for all other files
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R=301]
+########################################
+# 2. Remove .html extension from URLs
+########################################
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
 
-# Internally rewrite requests without extension to the actual .html file
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+########################################
+# 3. Route clean URLs to /pages/*.html
+########################################
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/$1.html -f
+RewriteRule ^(.+)$ /pages/$1.html [L]
+
+########################################
+# 4. Explicitly allow homepage index.html
+########################################
+DirectoryIndex index.html
