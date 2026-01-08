@@ -1,13 +1,17 @@
 RewriteEngine On
 
-# Remove index.html
+# 1 - Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2 - Remove index.html
 RewriteRule ^index\.html$ / [R=301,L]
 
-# Remove .html extension
+# 3 - Remove .html extension
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?]
 RewriteRule ^ %1 [R=301,L]
 
-# Internally map clean URLs back to .html files
+# 4️ - Internally map clean URLs back to .html files
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L]
