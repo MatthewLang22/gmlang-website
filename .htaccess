@@ -11,3 +11,13 @@ RewriteRule ^ /%1 [NC,L,R=301]
 # Internally rewrite requests without extension to the actual .html file
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+# Set the rewrite base to the root directory
+RewriteBase /
+
+# Check if the requested file or directory does not already exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Internally rewrite requests from the root to the /pages subdirectory
+RewriteRule ^(.*)$ pages/$1 [L]
