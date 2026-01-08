@@ -1,7 +1,11 @@
 RewriteEngine On
 
 # Removing pages from URL
-RewriteRule ^pages/(.*)$ /$1 [L,R=301]
+RewriteBase /
+RewriteCond %{REQUEST_URI} !^/pages/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ pages/$1 [L]
 
 # Remove index.html from any URL (e.g., domain.com -> domain.com)
 RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
