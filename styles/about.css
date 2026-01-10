@@ -6,60 +6,61 @@
 }
 
 body, html {
-  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
   background-color: #121212;
   color: #f5f5f5;
   width: 100%;
   min-width: 320px;
-  line-height: 1.6;
 }
 
-/* Main wrapper */
+/* Main page wrapper */
 .page {
   width: 100%;
-  padding: 100px 20px 40px;
 }
 
-.content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Section layout */
+/* Section styling */
 .section {
   display: flex;
-  flex-direction: row; /* row layout */
-  gap: 40px;
-  margin-bottom: 60px;
+  flex-direction: row; /* text left, image right */
   align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 100px 20px; /* vertical breathing room */
   flex-wrap: wrap;
+  scroll-margin-top: 80px;
 }
 
-/* Text on left, image on right */
+/* Text styling */
 .section-text {
   flex: 1 1 0;
   min-width: 0;
 }
 
 .section-text h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
   color: #ffcc00; /* subtle highlight */
 }
 
-/* Image styling */
+.section-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Image container */
 .section-img {
   flex-shrink: 0;
-  max-width: 400px;
+  max-width: 450px; /* slightly larger images */
   width: 100%;
 }
 
 .section-img img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
   transition: transform 0.3s ease;
 }
 
@@ -67,27 +68,40 @@ body, html {
   transform: scale(1.03);
 }
 
-/* Trophy image smaller */
+/* Trophy smaller */
 .trophy img {
   max-width: 150px;
 }
 
-/* Separator */
+/* Section-specific backgrounds */
+.section.goal {
+  background: linear-gradient(120deg, #1e1e1e 0%, #2a2a2a 100%);
+}
+
+.section.about {
+  background: #141414;
+}
+
+.section.professional {
+  background: #1a1a1a;
+}
+
+/* Separator (optional, if you want a line) */
 hr {
   border: none;
   border-top: 1px solid #333;
   margin: 60px 0;
 }
 
-/* Responsive */
+/* Responsive stacking */
 @media (max-width: 992px) {
   .section {
-    flex-direction: column; /* stack on mobile */
+    flex-direction: column;
     text-align: center;
   }
 
   .section-img {
-    max-width: 300px;
+    max-width: 350px;
     margin-top: 20px;
   }
 }
