@@ -3,8 +3,10 @@
 
 <head>
 <meta charset="UTF-8">
-<title>GMLang - Resume</title>
-<link rel="stylesheet" href="../styles/nav.css">
+<title>GMLang - Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/styles/nav.css">
+<link rel="stylesheet" href="/styles/contact.css">
 </head>
 
 <body>
@@ -32,6 +34,69 @@
 </div>
 
 <!-- Main Content -->
+ <main class="contact-page">
+    <section class="contact-container">
+      <h1>Baseball & Analytics Inquiries</h1>
+      <p>
+        For baseball analytics, player development, or research collaboration inquiries,
+        please use the form below. Or email directly: matthewlang2000@gmail.com
+      </p>
+
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="cd935210-4738-4802-86e7-e69ce13bd526">
+
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="form-success" class="form-success">
+      <h3>Message Sent</h3>
+      <p>
+        Thanks for reaching out. I’ll get back to you as soon as possible.
+      </p>
+    </div>
+
+
+    </section>
+  </main>
+
+
+  <script>
+  const form = document.getElementById('contact-form');
+  const successMessage = document.getElementById('form-success');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData
+    });
+
+    if (response.ok) {
+      form.style.display = 'none';
+      successMessage.style.display = 'block';
+    } else {
+      alert('Something went wrong. Please try again later.');
+    }
+  });
+</script>
 
 
 </body>
