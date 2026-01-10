@@ -23,13 +23,23 @@ body, html {
 /* Section styling */
 .section {
   display: flex;
-  flex-direction: row; /* text left, image right */
+  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   gap: 50px;
-  padding: 80px 20px; /* reduced vertical padding slightly */
+  padding: 80px 20px;
   flex-wrap: wrap;
   scroll-margin-top: 80px;
+
+  /* Scroll reveal initial state */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Text styling */
@@ -41,7 +51,7 @@ body, html {
 .section-text h2 {
   font-size: 2.5rem;
   margin-bottom: 25px;
-  color: #ffcc00; /* subtle highlight */
+  color: #ffcc00;
 }
 
 .section-text p {
@@ -52,8 +62,8 @@ body, html {
 /* Image container */
 .section-img {
   flex-shrink: 0;
-  max-width: 450px;
   width: 100%;
+  position: relative;
 }
 
 .section-img img {
@@ -68,32 +78,44 @@ body, html {
   transform: scale(1.03);
 }
 
-/* Trophy image smaller */
+/* Trophy image adjustment */
 .trophy img {
   max-width: 150px;
+  margin-top: 40px;
+  align-self: flex-start;
 }
 
 /* About Me image adjustment */
 .section.about .section-img {
-  max-width: 320px; /* smaller so it aligns with body text, not heading */
+  max-width: 320px;
+  margin-top: 20px; /* subtle offset for dynamic feel */
 }
 
-/* Section-specific backgrounds */
+/* Professional section image slightly larger */
+.section.professional .section-img {
+  max-width: 350px;
+  margin-top: 25px; /* subtle offset */
+}
+
+/* Section-specific backgrounds with alternating contrast */
 .section.goal {
   background: linear-gradient(120deg, #1e1e1e 0%, #2a2a2a 100%);
-  padding-bottom: 60px; /* reduce space to About Me */
+  padding-bottom: 60px;
 }
 
 .section.about {
-  background: #141414;
-  padding-top: 40px; /* tighter spacing from previous section */
+  background: #1c1c1c;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .section.professional {
-  background: #1a1a1a;
+  background: #141414;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
-/* Separator (optional, if you want a line) */
+/* Optional separator */
 hr {
   border: none;
   border-top: 1px solid #333;

@@ -34,11 +34,10 @@
 </div>
 
 <!-- Main Content -->
-
 <main class="page">
 
   <!-- Goal Section -->
-  <section class="section goal">
+  <section class="section goal reveal">
     <div class="section-text">
       <h2>Goal</h2>
       <p>
@@ -51,7 +50,7 @@
   </section>
 
   <!-- About Me Section -->
-  <section class="section about">
+  <section class="section about reveal">
     <div class="section-text">
       <h2>About Me</h2>
       <p>
@@ -67,7 +66,7 @@
   </section>
 
   <!-- Professional / Technical Section -->
-  <section class="section professional">
+  <section class="section professional reveal">
     <div class="section-text">
       <p>
         Professionally, I currently work as a Software Site Reliability Engineer at Highmark Health, where I design and maintain large-scale systems supporting enterprise reliability and performance. My role requires analytical problem-solving, pattern recognition, and the development of tools and visual models that support high-stakes decision-making. These experiences have strengthened my skills in analytics, software design, and applied problem-solving capabilities. I am eager to bring this skill set into a baseball operations and player development environment.
@@ -83,6 +82,23 @@
 
 </main>
 
- 
+<script>
+  // Simple scroll reveal animation
+  const reveals = document.querySelectorAll('.reveal');
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    reveals.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if(sectionTop < triggerBottom) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
 </body>
 </html>
