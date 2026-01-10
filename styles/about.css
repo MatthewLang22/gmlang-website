@@ -1,4 +1,4 @@
-/* Reset + base */
+/* Base + reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,7 +15,7 @@ body, html {
   min-width: 320px;
 }
 
-/* Main page wrapper */
+/* Main wrapper */
 .page {
   width: 100%;
 }
@@ -27,22 +27,24 @@ body, html {
   align-items: flex-start;
   justify-content: space-between;
   gap: 50px;
-  padding: 80px 20px;
+  padding: 60px 20px;
   flex-wrap: wrap;
   scroll-margin-top: 80px;
+}
 
-  /* Scroll reveal initial state */
+/* Only reveal sections have animations */
+.section.reveal {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
 
-.section.active {
+.section.reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Text styling */
+/* Text */
 .section-text {
   flex: 1 1 0;
   min-width: 0;
@@ -78,35 +80,35 @@ body, html {
   transform: scale(1.03);
 }
 
-/* Trophy image adjustment */
+/* Trophy image aligned with paragraph text */
 .trophy img {
   max-width: 150px;
-  margin-top: 40px;
+  margin-top: 12px; /* small offset to line up with paragraph */
   align-self: flex-start;
 }
 
-/* About Me image adjustment */
+/* About Me image */
 .section.about .section-img {
   max-width: 320px;
-  margin-top: 20px; /* subtle offset for dynamic feel */
+  margin-top: 20px;
 }
 
-/* Professional section image slightly larger */
+/* Professional image */
 .section.professional .section-img {
   max-width: 350px;
-  margin-top: 25px; /* subtle offset */
+  margin-top: 25px;
 }
 
-/* Section-specific backgrounds with alternating contrast */
+/* Section backgrounds */
 .section.goal {
   background: linear-gradient(120deg, #1e1e1e 0%, #2a2a2a 100%);
-  padding-bottom: 60px;
+  padding-bottom: 40px; /* tighter spacing to About Me */
 }
 
 .section.about {
   background: #1c1c1c;
   padding-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 50px; /* tighter spacing to Professional section */
 }
 
 .section.professional {
@@ -115,14 +117,7 @@ body, html {
   padding-bottom: 80px;
 }
 
-/* Optional separator */
-hr {
-  border: none;
-  border-top: 1px solid #333;
-  margin: 60px 0;
-}
-
-/* Responsive stacking */
+/* Responsive */
 @media (max-width: 992px) {
   .section {
     flex-direction: column;

@@ -36,8 +36,8 @@
 <!-- Main Content -->
 <main class="page">
 
-  <!-- Goal Section -->
-  <section class="section goal reveal">
+  <!-- Goal Section (no animation) -->
+  <section class="section goal">
     <div class="section-text">
       <h2>Goal</h2>
       <p>
@@ -49,7 +49,7 @@
     </div>
   </section>
 
-  <!-- About Me Section -->
+  <!-- About Me Section (with scroll reveal) -->
   <section class="section about reveal">
     <div class="section-text">
       <h2>About Me</h2>
@@ -65,7 +65,7 @@
     </div>
   </section>
 
-  <!-- Professional / Technical Section -->
+  <!-- Professional / Technical Section (with scroll reveal) -->
   <section class="section professional reveal">
     <div class="section-text">
       <p>
@@ -83,7 +83,7 @@
 </main>
 
 <script>
-  // Simple scroll reveal animation
+  // Scroll reveal only for sections with class 'reveal'
   const reveals = document.querySelectorAll('.reveal');
   const revealOnScroll = () => {
     const triggerBottom = window.innerHeight * 0.85;
@@ -99,6 +99,7 @@
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
 </script>
+
 
 </body>
 </html>
