@@ -1,83 +1,64 @@
-:root {
-  --bg: #0f1115;
-  --text-main: #e6e6e6;
-  --text-muted: #b3b3b3;
-  --rule: #3a3f46;
+/* Reset + base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  margin: 0;
-  background-color: var(--bg);
-  color: var(--text-main);
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+body, html {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* dark mode */
+  color: #f5f5f5; /* light text */
+  width: 100%;
+  min-width: 320px;
   line-height: 1.6;
 }
 
-/* Offset for 80px navbar */
+/* Main Content */
 .page {
-  padding-top: 80px;
+  padding: 100px 20px 40px; /* top padding accounts for fixed navbar if you have one */
 }
 
 .content {
-  max-width: 900px;
+  max-width: 900px; /* keeps content readable on desktop */
   margin: 0 auto;
-  padding: 40px 24px 80px;
-  position: relative;
 }
 
-/* Section layout using flexbox */
+/* Section layout */
 .section {
   display: flex;
-  align-items: flex-start;
-  gap: 24px;
+  flex-direction: row; /* side by side on desktop */
+  gap: 20px;
   margin-bottom: 40px;
-  flex-wrap: wrap; /* stacks on small screens */
+  align-items: flex-start;
 }
 
-.section-img {
-  flex: 0 0 180px;
-}
-
-.section-img img {
+.section img {
+  max-width: 300px;
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
-.trophy {
-  flex: 0 0 90px; /* smaller trophy image */
-  margin-top: -10px;
-}
-
+/* Text next to image */
 .section-text {
   flex: 1;
 }
 
-h2 {
-  font-size: 1.6rem;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
+/* Trophy image smaller */
+.trophy img {
+  max-width: 150px;
 }
 
-p {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  margin-bottom: 1.1rem;
-}
+/* Responsive - stack sections on mobile */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-hr {
-  border: none;
-  border-top: 1px dashed var(--rule);
-  margin: 2.5rem 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 700px) {
-  h2 { font-size: 1.4rem; }
-  p { font-size: 1rem; }
-  .section-img {
-    flex: 0 0 160px;
-    margin: 0 auto 20px;
+  .section img {
+    margin-bottom: 20px;
   }
 }
