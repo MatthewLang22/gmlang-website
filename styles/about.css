@@ -1,76 +1,83 @@
-    :root {
-      --bg: #0f1115;
-      --text-main: #e6e6e6;
-      --text-muted: #b3b3b3;
-      --rule: #3a3f46;
-    }
+:root {
+  --bg: #0f1115;
+  --text-main: #e6e6e6;
+  --text-muted: #b3b3b3;
+  --rule: #3a3f46;
+}
 
-    body {
-      margin: 0;
-      background-color: var(--bg);
-      color: var(--text-main);
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
 
-    /* Offset for existing navbar */
-    .page {
-      padding-top: 80px;
-    }
+/* Offset for 80px navbar */
+.page {
+  padding-top: 80px;
+}
 
-    .content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-      position: relative;
-    }
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  position: relative;
+}
 
-    h2 {
-      font-size: 1.6rem;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-    }
+/* Section layout using flexbox */
+.section {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* stacks on small screens */
+}
 
-    p {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      margin-bottom: 1.1rem;
-    }
+.section-img {
+  flex: 0 0 180px;
+}
 
-    hr {
-      border: none;
-      border-top: 1px dashed var(--rule);
-      margin: 2.5rem 0;
-    }
+.section-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
 
-    /* Right-aligned images like the Word doc */
-    .float-img {
-      float: right;
-      margin-left: 32px;
-      margin-bottom: 20px;
-      width: 180px;
-    }
+.trophy {
+  flex: 0 0 90px; /* smaller trophy image */
+  margin-top: -10px;
+}
 
-    .float-img img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+.section-text {
+  flex: 1;
+}
 
-    .trophy {
-      width: 90px;
-      margin-top: -10px;
-    }
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
 
-    /* Clear floats between logical sections */
-    .clear {
-      clear: both;
-    }
+p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+}
 
-    @media (max-width: 700px) {
-      .float-img {
-        float: none;
-        margin: 20px 0;
-        width: 160px;
-      }
-    }
+hr {
+  border: none;
+  border-top: 1px dashed var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  h2 { font-size: 1.4rem; }
+  p { font-size: 1rem; }
+  .section-img {
+    flex: 0 0 160px;
+    margin: 0 auto 20px;
+  }
+}
