@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   gap: 40px; /* keeps your original spacing */
+  padding-left: 30px;
 }
 
   .navbar a, .dropdown-btn {
@@ -75,6 +76,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  padding-right: 15px;
 }
 
 
