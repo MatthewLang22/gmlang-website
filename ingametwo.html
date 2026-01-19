@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>In-Game Decision Analysis II | GMLang.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/ingameone.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <!-- LEFT SIDE -->
+    <div class="nav-left">
+      <li><a href="/">Home ⛊</a></li>
+
+      <!-- Portfolio Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-btn">Portfolio ▼</span>
+        <div class="dropdown-content">
+          <a href="/hittingreport">Run Creation Analysis & Matchup Strategy</a>
+          <a href="/hittingreport">In-Game Decision Analysis I</a>
+          <a href="/hittingreport">In-Game Decision Analysis II</a>
+          <a href="/hittingreport">Pitcher Performance Analysis</a>
+          <a href="/hittingreport">ABS Challenge Strategy</a>
+          <a href="/hittingreport">Pinch-Hit Hitting Report</a>
+        </div>
+      </div>
+
+      <li><a href="/resume">Resume</a></li>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <!-- Right Aligned -- Social Media Buttons -->
+    <div class="social-buttons">
+      <a class="linkedin-btn" href="https://www.linkedin.com/in/matthewlang22/" target="_blank">
+        <img src="/media/linkedin.png" alt="LinkedIn">
+      </a>
+      <a class="github-btn" href="https://github.com/MatthewLang22" target="_blank">
+        <img src="/media/github.png" alt="GitHub">
+      </a>
+      <a class="email-btn" href="mailto:matthewlang2000@gmail.com" target="_blank">
+        <img src="/media/email.png" alt="Email">
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="page">
+
+    <!-- Section 1: Prompt -->
+    <section class="prompt">
+      <div class="section-text">
+        <h2>Prompt:</h2>
+        <p>
+            Below is a link to video of the Bottom of the 9th Inning from the Giants / Pirates game on August 4, 2025; and the Baseball Reference Play Log for it: https://drive.google.com/file/d/1G_nLw5xJXY0O_oY_dol05r-ru75Su21t/view?pli=1
+        </p>
+        <p>
+            As you watch the half inning, what stands out to you about it? Please analyze multiple events or decisions (either moves or non-moves) from this half inning, briefly summarizing what you observed, why you thought it was noteworthy, and what information you would want to look at to evaluate it further.
+        </p>
+      </div>
+      <div class="gamelog">
+        <img src="/media/pirates-gamelog.png" alt="Baseball Reference Game Log">
+      </div>
+    </section>
+
+    <!-- Section 2: Situation-->
+    <section class="situation">
+      <div class="section-text">
+        <h2>Situation:</h2>
+        <p>
+            Entering the bottom of the 9th down by one run, the Pirates are facing All-Star Randy Rodriguez, who is having an outstanding season with excellent Baseball Savant metrics.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: General Strategy Considerations -->
+    <section class="general">
+      <div class="section-text">
+        <h2>General Strategy Considerations:</h2>
+        <ul>
+          <li>Before each at-bat, hitters should be shown a detailed graphic outlining Rodriguez’s pitch mix, usage percentages, average velocity, movement profile, and heatmaps of common locations - this can be found on Baseball Savant.</li>
+          <li>Rodriguez’s 2025 numbers show reverse platoon splits, with right-handed hitters performing noticeably better against him than left-handed hitters.</li>
+          <li>Opposing catcher Patrick Bailey is an elite defender, making stolen-base attempts high-risk and generally inadvisable.</li>
+          <li>The full bench includes Bryan Reynolds, Alexander Canario, Henry Davis, and Jared Triolo, all of whom are available for pinch-hitting or pinch-running roles depending on matchup needs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 4: Decision 1 -->
+    <section class="decision1">
+      <div class="section-text">
+        <h2>Decision #1 — Pinch hitting Reynolds for Peguero</h2>
+        <p>
+           ✅Agree. Entering the inning, the staff had already identified Bryan Reynolds as the pinch hitter for Peguero, and this was the right call. Reynolds was simply the Pirates’ best hitter in 2025 and was coming off a routine rest day rather than an injury. Ensuring he received a plate appearance in the ninth was essential. Peguero had limited major-league experience at that point in the season, and because he was scheduled to bat second, this was the optimal spot to deploy Reynolds.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Decision 2 -->
+    <section class="decision2">
+      <div class="section-text">
+        <h2>Decision #2 — Pinch running Canario for McCutchen</h2>
+        <p>
+          ✅Agree. Statcast shows McCutchen’s top sprint speed at 27.1 ft/s, whereas Canario’s was 28.1. While Davis (28.3) and Triolo (28.8) are slightly faster, the gap is marginal. Because Canario’s bat is the weakest of the three, using him as the pinch runner preserved better pinch-hit options for later in the game.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Decision 3 -->
+    <section class="decision3">
+      <div class="section-text">
+        <h2>Decision #3 — Allowing Suwinski to hit instead of pinch-hitting</h2>
+        <p>
+          ❌Disagree. I would have pinch hit Triolo for Suwinski for two reasons. First, Rodriguez exhibits strong reverse splits: In 2025 he was far more dominant against left-handed hitters (.128 BA, .414 OPS, 40% K rate) than right-handers (.250 BA, .662 OPS, 33% K rate). Second, Suwinski was struggling significantly at the time, posting a .080 batting average and a 48% strikeout rate in the prior month. Triolo had been the stronger offensive option with more reliable major-league at-bats. In that matchup, I would have preferred Triolo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 6: Decision 4 -->
+    <section class="decision4">
+      <div class="section-text">
+        <h2>Decision #4 — Allowing Bart to swing rather than bunt</h2>
+        <p>
+          ✅Agree. This was not a bunting situation. Both run expectancy and win expectancy decrease when trading an out to move runners from first-and-second with one out to second-and-third with two outs. The analytics strongly support swinging away, and the staff made the correct call.
+        </p>
+      </div>
+    </section>
+
+        <!-- Section 7: Decision 5 -->
+    <section class="decision5">
+      <div class="section-text">
+        <h2>Decision #5 — Pinch running Davis for Bart</h2>
+        <p>
+          ✅Agree. Even with the winning run already on third, having elite speed on first or second base matters. With the infield playing in, a ground ball could easily result in an out at the plate, making the runner on second the potential winning run. Davis’ speed increases the odds of scoring on any ball put into play.
+        </p>
+      </div>
+    </section>
+
+        <!-- Section 8: Decision 6 -->
+    <section class="decision6">
+      <div class="section-text">
+        <h2>Decision #6 — Allowing Bart to take second on defensive indifference</h2>
+        <p>
+          ✅Agree. With the infield positioned in and second base uncovered, taking the free base was automatic. It created no downside and increased the chances of scoring on a single.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
