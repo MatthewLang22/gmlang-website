@@ -1,3 +1,9 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;   /* hides any tiny horizontal overflow */
+}
+
 /* Page layout */
 .contact-page {
   min-height: 100vh;
