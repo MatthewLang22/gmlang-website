@@ -122,7 +122,7 @@
     const reveals = page.querySelectorAll('.reveal');
 
     const revealOnScroll = () => {
-      const triggerBottom = page.clientHeight * 0.85;
+      const triggerBottom = window.innerHeight * 0.85;
       reveals.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top - page.getBoundingClientRect().top;
         if (sectionTop < triggerBottom) {
@@ -133,7 +133,7 @@
       });
     };
 
-    page.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
   </script>
 
