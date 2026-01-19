@@ -123,7 +123,7 @@
     const triggerBottom = window.innerHeight * 0.85;
 
     reveals.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
+      const sectionTop = section.getBoundingClientRect().top; // relative to viewport
 
       if (sectionTop < triggerBottom) {
         section.classList.add('active');
@@ -136,7 +136,6 @@
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
 </script>
-
 
 </body>
 </html>
