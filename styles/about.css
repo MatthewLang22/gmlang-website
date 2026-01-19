@@ -134,6 +134,7 @@ html, body {
   padding-top: 80px;           /* leave space for navbar */
   height: calc(100vh - 80px);  /* fill viewport */
   overflow-y: auto;            /* scroll content inside page */
+  scroll-padding-top: 80px;        /* <-- fixes anchor jump under navbar */
 }
 
 /* Section styling */
@@ -145,7 +146,7 @@ html, body {
   gap: 50px;
   padding: 60px 20px;
   flex-wrap: wrap;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 /* Only reveal sections have animations */
@@ -223,13 +224,13 @@ html, body {
 /* Section backgrounds */
 .section.goal {
   background: linear-gradient(120deg, #1e1e1e 0%, #2a2a2a 100%);
-  padding-top: 100px;
+  padding-top: 10px;
   padding-bottom: 50px;
 }
 
 .section.about {
   background: #1c1c1c;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 30px;
 }
 
