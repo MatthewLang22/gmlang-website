@@ -248,6 +248,37 @@ section {
 }
 
 /* --------------------- */
+/* Section backgrounds - alternating dark/light grey */
+/* --------------------- */
+.prompt {
+  background-color: #1a1a1a;  /* dark grey */
+}
+
+.summary {
+  background-color: #222222;  /* slightly lighter grey */
+}
+
+.pitchtypes {
+  background-color: #1a1a1a;  /* dark grey */
+}
+
+.zoneheatmap {
+  background-color: #222222;  /* slightly lighter grey */
+}
+
+.profile {
+  background-color: #1a1a1a;  /* dark grey */
+}
+
+.walkrate {
+  background-color: #222222;  /* slightly lighter grey */
+}
+
+.chaserate {
+  background-color: #1a1a1a;  /* dark grey */
+}
+
+/* --------------------- */
 /* Responsive Adjustments */
 /* --------------------- */
 @media (max-width: 992px) {
