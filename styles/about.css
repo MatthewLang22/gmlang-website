@@ -1,11 +1,21 @@
 /* --------------------- */
 /* Global / Body Reset    */
 /* --------------------- */
+
+/* Global box-sizing & body reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  overflow-x: hidden;   /* hide horizontal scroll */
+  overflow-x: hidden;       /* horizontal only */
+  overflow-y: auto;         /* vertical scroll on body */
+  height: 100%;             /* allow full page height */
   background-color: #121212;
 }
 
@@ -122,6 +132,7 @@ html, body {
 /* --------------------- */
 /* Main Content / Page Wrapper */
 /* --------------------- */
+/* Main content wrapper */
 .page {
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   font-size: 18px;
@@ -129,10 +140,9 @@ html, body {
   color: #f5f5f5;
   width: 100%;
   min-width: 320px;
-  padding-top: 80px;          /* push content below navbar */
-  overflow: visible;           /* do NOT create inner scroll */
-  height: auto;                /* remove calc(100vh - 80px) */
-  min-height: 0;               /* safe reset */
+  padding-top: 80px;        /* offset fixed navbar */
+  overflow: visible;        /* let body handle scrolling */
+  height: auto;             /* content dictates height */
 }
 
 /* Section styling */
