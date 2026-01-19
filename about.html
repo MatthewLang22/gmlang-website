@@ -116,26 +116,27 @@
 
   </main>
 
-  <script>
-    // Scroll reveal for sections inside .page
-    const page = document.querySelector('.page');
-    const reveals = page.querySelectorAll('.reveal');
+<script>
+  const reveals = document.querySelectorAll('.reveal');
 
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      reveals.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top - page.getBoundingClientRect().top;
-        if (sectionTop < triggerBottom) {
-          section.classList.add('active');
-        } else {
-          section.classList.remove('active');
-        }
-      });
-    };
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
 
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-  </script>
+    reveals.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+
+      if (sectionTop < triggerBottom) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
 
 </body>
 </html>
