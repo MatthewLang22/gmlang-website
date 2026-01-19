@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>In-Game Decision Analysis I | GMLang.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/ingameone.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <!-- LEFT SIDE -->
+    <div class="nav-left">
+      <li><a href="/">Home ⛊</a></li>
+
+      <!-- Portfolio Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-btn">Portfolio ▼</span>
+        <div class="dropdown-content">
+          <a href="/hittingreport">Run Creation Analysis & Matchup Strategy</a>
+          <a href="/hittingreport">In-Game Decision Analysis I</a>
+          <a href="/hittingreport">In-Game Decision Analysis II</a>
+          <a href="/hittingreport">Pitcher Performance Analysis</a>
+          <a href="/hittingreport">ABS Challenge Strategy</a>
+          <a href="/hittingreport">Pinch-Hit Hitting Report</a>
+        </div>
+      </div>
+
+      <li><a href="/resume">Resume</a></li>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <!-- Right Aligned -- Social Media Buttons -->
+    <div class="social-buttons">
+      <a class="linkedin-btn" href="https://www.linkedin.com/in/matthewlang22/" target="_blank">
+        <img src="/media/linkedin.png" alt="LinkedIn">
+      </a>
+      <a class="github-btn" href="https://github.com/MatthewLang22" target="_blank">
+        <img src="/media/github.png" alt="GitHub">
+      </a>
+      <a class="email-btn" href="mailto:matthewlang2000@gmail.com" target="_blank">
+        <img src="/media/email.png" alt="Email">
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="page">
+
+    <!-- Section 1: Prompt -->
+    <section class="prompt">
+      <div class="section-text">
+        <h2>Prompt:</h2>
+        <p>
+            Below is a link to video of the Bottom of the 7th Inning from the Dodgers / Padres game on September 26, 2024; and the Baseball Reference Play Log for it: https://www.loom.com/share/9dc56a3e339e426f8b29d7d6328869a0?sid=3f562609-d056- 4b83-84d3-9470b969a780 
+        </p>
+        <p>
+            As you watch the half inning, what stands out to you about it? Please analyze 4 events or decisions (either moves or non-moves) from this half inning, briefly summarizing what you observed, why you thought it was noteworthy, and what information you would want to look at to evaluate it further.
+        </p>
+      </div>
+      <div class="gamelog">
+        <img src="/media/dodgers-gamelog.png" alt="Baseball Reference Game Log">
+      </div>
+    </section>
+
+    <!-- Section 2: Situation-->
+    <section class="situation">
+      <div class="section-text">
+        <h2>Situation:</h2>
+        <p>
+           Entering the bottom of the 7th inning down by the score of 0-2, the Dodgers are facing starter Joe Musgrove, who is currently at 70 pitches.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: General Strategy Considerations -->
+    <section class="general">
+      <div class="section-text">
+        <h2>General Strategy Considerations:</h2>
+        <ul>
+          <li>General strategy is to work counts (see multiple pitches) to increase Musgrove’s pitch count to remove him from the game. </li>
+          <li>Scott is having an outstanding 2024 season with excellent Baseball Savant metrics. He has normal platoon splits, with right-handed hitters performing noticeably better against him than left-handed hitters.</li>
+          <li>Opposing catcher Kyle Higashioka is an elite defender, making stolen-base attempts high-risk and generally inadvisable - especially when lefty Tanner Scott is on the mound. </li>
+          <li>The full bench includes Chris Taylor, Kevin Kiermaier, Kiki Hernandez, Austin Barnes, and Miguel Rojas - all of whom are available for pinch-hitting or pinch-running roles, depending on matchup needs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 4: Decision 1 -->
+    <section class="decision1">
+      <div class="section-text">
+        <h2>#1 – Padres Decision — Going to the bullpen: Replacing Joe Musgrove with Tanner Scott</h2>
+        <p>
+           ✅Agree. Musgrove is at 85 pitches, already mostly through his 3rd time in the order. Both his control and command have decreased in the 7th, indicating fatigue. 3 of the next 5 Dodger bats are lefties - Lux, Ohtani, and Freeman. This is a high leverage situation, and Scott has been one of the most reliable arms in the Padres pen. 
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Decision 2 -->
+    <section class="decision2">
+      <div class="section-text">
+        <h2>#2 – Dodgers Decision — Pinch hitting Kiki Hernandez for Gavin Lux</h2>
+        <p>
+          ✅Agree. Hernandez provides the Dodgers with a clear platoon advantage over Lux, giving them the best chance of getting on base. Hernandez also is on a hot streak - hitting .429 with 2 HR in the last 6 games. This gives him the edge over other righty bench bats. Defensively, he can also play 2B in place of Lux.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Decision 3 -->
+    <section class="decision3">
+      <div class="section-text">
+        <h2>#3 – Padres Decision — Infield in</h2>
+        <p>
+          ✅Agree. Situation: Bottom of the 7th, down by the score of 2-3, runners on 2nd and 3rd, 1 out. The Padres need to do whatever possible to prevent any more runs from scoring, because win expectancy would plummet. Run expectancy (using 2025 data from fangraphs) for this situation is 1.41, where having 2 outs is 0.67. The infield being in enables them to look back / cut down the runner at the plate on a ground ball to stop a run from scoring. This would lower the Dodgers run expectancy, which would increase the win expectancy for the Padres. 
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 6: Decision 4 -->
+    <section class="decision4">
+      <div class="section-text">
+        <h2>#4 – Dodgers Decision – Letting Max Muncy hit</h2>
+        <p>
+          ❌Disagree. In this situation, I would have pinch hit Miguel Rojas for Max Muncy. In 2024, Max Muncy hit .172 against left handed pitchers, while Miguel Rojas hit .260 against lefties. Rojas at the plate would have given the Dodgers the best chance to score more runs in the inning. Defensively in 2024, Rojas also was in the 97th percentile in Range (OAA), while Muncy was in the 64th percentile. Additionally, Rojas would have strengthened the Dodgers infield in the last few innings.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
