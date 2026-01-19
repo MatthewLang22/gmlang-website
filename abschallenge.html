@@ -3,8 +3,9 @@
 
 <head>
 <meta charset="UTF-8">
-<title>ABS Challenge Strategy | GMLang.com</title>
-<link rel="stylesheet" href="/styles/abschallenge.css">
+<title>About | GMLang.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/styles/about.css">
 <link rel="stylesheet" href="/styles/nav.css">
 </head>
 
@@ -25,7 +26,7 @@
         <a href="/hittingreport">In-Game Decision Analysis I</a>
         <a href="/hittingreport">In-Game Decision Analysis II</a>
         <a href="/hittingreport">Pitcher Performance Analysis</a>
-        <a href="/abschallenge">ABS Challenge Strategy</a>
+        <a href="/hittingreport">ABS Challenge Strategy</a>
         <a href="/hittingreport">Pinch-Hit Hitting Report</a>
       </div>
     </div>
@@ -55,110 +56,70 @@
 <!-- Main Content -->
 <main class="page">
 
-  <!-- Section 1: Question (no animation) -->
+  <!-- Goal Section (no animation) -->
   <section class="section goal">
     <div class="section-text">
-      <h2>Question</h2>
+      <h2>Goal</h2>
       <p>
-        You’re tasked with developing a resource to assist our major league coaching staff with ABS challenge strategy in 2026. Please describe your plan for developing this resource. Please address the following in your response:
+        My goal is to help organizations turn data into actionable insight that directly improves player development and drives smarter on-field decisions, ultimately contributing to winning a World Series championship.
       </p>
-      <p>
-        a. What information you would consult<br>
-        b. Who you would consult<br>
-        c. What questions you’d want to answer<br>
-        d. A plan of attack for developing this resource
-      </p>
+    </div>
+    <div class="section-img trophy">
+      <img src="/media/ws-trophy.png" alt="World Series Trophy">
     </div>
   </section>
 
-  <!-- Section 2: Information -->
-  <section class="section reveal">
+  <!-- About Me Section (with scroll reveal) -->
+  <section class="section about reveal">
     <div class="section-text">
-      <h2>Information I Would Consult</h2>
+      <h2>About Me</h2>
       <p>
-        I would begin by reviewing the official MLB ABS challenge system rules, including challenge limits, retention rules, and extra-inning procedures. Key operational details—such as the fact that only the pitcher, catcher, or batter may initiate a challenge, must signal immediately by tapping their hat or helmet, and cannot receive input from the dugout—would be essential for designing any strategic guidance.
+        Hello — my name is Matthew Lang. I am eager to contribute to an MLB organization’s player development efforts by combining my technical background, on-field baseball experience, and lifelong passion for improving the game through innovation. My primary interests lie in baseball strategy, including run creation, run prevention, and player personnel decision-making.
       </p>
       <p>
-        Next, I would gather and consolidate a comprehensive set of 2025 ball/strike data. This would include league-wide and team-specific metrics such as missed-call rates by game and by count, spatial trends in missed calls, individual umpire tendencies, and internal evaluations of which of our hitters demonstrate consistently strong strike-zone judgment (chase %). All of this data would form the foundation for identifying where challenges historically create the highest value.
+        I graduated from Ohio University in 2022 with a 4.0 GPA, majoring in Computer Science Engineering. During that time, I also played collegiate baseball for one of the nation’s top NCBA programs, making starts in center field, shortstop, and on the mound. In parallel, I have spent several years training and coaching at Strike Zone, an indoor baseball facility operated by former MLB shortstop Carlos Rodriguez. Through that experience, I developed a strong foundation in player development, practice design, and video-based instruction.
       </p>
+    </div>
+    <div class="section-img">
+      <img src="/media/matt-ou.PNG" alt="Matthew Lang playing baseball at Ohio University">
     </div>
   </section>
 
-  <!-- Section 3: Who I Would Consult -->
-  <section class="section reveal">
+  <!-- Professional / Technical Section (with scroll reveal) -->
+  <section class="section professional reveal">
     <div class="section-text">
-      <h2>Who I Would Consult</h2>
       <p>
-        I would collaborate closely with members of the Pirates Strategy group and front office, as well as the major league coaching staff and select players, to gather their perspectives and ensure the resource aligns with on-field decision-making.
+        Professionally, I currently work as a Software Site Reliability Engineer at Highmark Health, where I design and maintain large-scale systems supporting enterprise reliability and performance. My role requires analytical problem-solving, pattern recognition, and the development of tools and visual models that support high-stakes decision-making. These experiences have strengthened my skills in analytics, software design, and applied problem-solving capabilities. I am eager to bring this skill set into a baseball operations and player development environment.
       </p>
       <p>
-        Given their practical experience, I would also consult with minor league staff—especially at Triple-A Indianapolis—who have already operated under the ABS Challenge System. Their insights into in-game processes, player comfort, and common pitfalls would be invaluable.
-      </p>
-      <p>
-        Because ABS is newly implemented at the MLB level, the initial resource will not be perfect. I would treat it as a living document, continuously refining it throughout the season based on feedback, new data, and evolving league trends.
+        Technically, I am highly proficient in Python, SQL, R, C++, HTML/CSS, and JavaScript, with extensive experience in data visualization and performance analysis. I also have hands-on experience applying machine learning techniques such as k-means clustering, network centrality, and anomaly detection. Just as importantly, I bring a coach’s mindset, an engineer’s discipline, and a deep respect for the game—focused on helping players and staff make better, data-informed decisions.
       </p>
     </div>
-  </section>
-
-  <!-- Section 4: Questions -->
-  <section class="section reveal">
-    <div class="section-text">
-      <h2>Questions I Would Want to Answer</h2>
-      <p>
-        Are umpires more prone to calling balls as strikes, or strikes as balls—and where in the zone do these misses most commonly occur?
-      </p>
-      <p>
-        Which position—pitcher, catcher, or hitter—has historically shown the highest accuracy in initiating successful challenges?
-      </p>
-      <p>
-        Which umpires exhibit the strongest tendencies or patterns in missed calls, and in what locations or counts do those tendencies appear?
-      </p>
-      <p>
-        Are certain pitchers more likely to receive favorable or unfavorable calls on specific pitch types or locations?
-      </p>
-      <p>
-        How do a catcher’s setup, receiving skills, and framing tendencies influence an umpire’s likelihood of missing a call?
-      </p>
-      <p>
-        Which counts or in-game situations yield the highest swing in win probability and therefore merit more aggressive or conservative challenge strategies? Is it best to conserve at least one challenge for later innings?
-      </p>
-      <p>
-        Are batters and catchers consistently reviewing iPad information between innings to gain awareness of in-game missed-call trends?
-      </p>
-    </div>
-  </section>
-
-  <!-- Section 5: Plan of Attack -->
-  <section class="section reveal">
-    <div class="section-text">
-      <h2>Plan of Attack</h2>
-      <p>
-        My plan of attack is to gather and centralize relevant ABS data—including rules, missed-call patterns, umpire tendencies, and player-specific metrics—analyze it using statistical models to identify high-value challenges, develop a practical decision framework for coaches and players, and iteratively refine the resource through collaboration with the strategy team, on-field staff, and experienced minor-league personnel throughout the season.
-      </p>
+    <div class="section-img">
+      <img src="/media/matt-prof.jpeg" alt="Matthew Lang professional photo">
     </div>
   </section>
 
 </main>
 
 <script>
+  // Scroll reveal only for sections with class 'reveal'
   const reveals = document.querySelectorAll('.reveal');
-
   const revealOnScroll = () => {
     const triggerBottom = window.innerHeight * 0.85;
-
     reveals.forEach(section => {
       const sectionTop = section.getBoundingClientRect().top;
-      if (sectionTop < triggerBottom) {
+      if(sectionTop < triggerBottom) {
         section.classList.add('active');
       } else {
         section.classList.remove('active');
       }
     });
   };
-
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
 </script>
+
 
 </body>
 </html>
