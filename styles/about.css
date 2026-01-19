@@ -15,7 +15,7 @@ html, body {
 /* Navbar Styles          */
 /* --------------------- */
 .navbar {
-  position: fixed;
+  position: sticky; /* Avoid covering scroll bar */
   top: 0;
   width: 100%;
   height: 80px;                          
