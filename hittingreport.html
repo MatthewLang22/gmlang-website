@@ -2,56 +2,135 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<title>Pinch-Hit Hitting Report | GMLang.com</title>
+  <meta charset="UTF-8">
+  <title>Hitting Report | GMLang.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/hittingreport.css">
 </head>
 
 <body>
 
-<!-- Navbar -->
-<div class="navbar">
+  <!-- Navbar -->
+  <div class="navbar">
+    <!-- LEFT SIDE -->
+    <div class="nav-left">
+      <li><a href="/">Home ⛊</a></li>
 
-   <!-- LEFT SIDE -->
-  <div class="nav-left">
-    <li><a href="/">Home ⛊</a></li>
-
-    <!-- Portfolio Dropdown -->
-    <div class="dropdown">
-      <span class="dropdown-btn">Portfolio ▼</span>
-      <div class="dropdown-content">
-        <a href="/hittingreport">Run Creation Analysis & Matchup Strategy</a>
-        <a href="/hittingreport">In-Game Decision Analysis I</a>
-        <a href="/hittingreport">In-Game Decision Analysis II</a>
-        <a href="/hittingreport">Pitcher Performance Analysis</a>
-        <a href="/hittingreport">ABS Challenge Strategy</a>
-        <a href="/hittingreport">Pinch-Hit Hitting Report</a>
+      <!-- Portfolio Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-btn">Portfolio ▼</span>
+        <div class="dropdown-content">
+          <a href="/hittingreport">Run Creation Analysis & Matchup Strategy</a>
+          <a href="/hittingreport">In-Game Decision Analysis I</a>
+          <a href="/hittingreport">In-Game Decision Analysis II</a>
+          <a href="/hittingreport">Pitcher Performance Analysis</a>
+          <a href="/hittingreport">ABS Challenge Strategy</a>
+          <a href="/hittingreport">Pinch-Hit Hitting Report</a>
+        </div>
       </div>
+
+      <li><a href="/resume">Resume</a></li>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </div>
 
-    <li><a href="/resume">Resume</a></li>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
+    <!-- Right Aligned -- Social Media Buttons -->
+    <div class="social-buttons">
+      <a class="linkedin-btn" href="https://www.linkedin.com/in/matthewlang22/" target="_blank">
+        <img src="/media/linkedin.png" alt="LinkedIn">
+      </a>
+      <a class="github-btn" href="https://github.com/MatthewLang22" target="_blank">
+        <img src="/media/github.png" alt="GitHub">
+      </a>
+      <a class="email-btn" href="mailto:matthewlang2000@gmail.com" target="_blank">
+        <img src="/media/email.png" alt="Email">
+      </a>
+    </div>
   </div>
 
-  <!-- Right Alligned -- Social Media Buttons -->
-  <div class="social-buttons">
-    <a class="linkedin-btn" href="https://www.linkedin.com/in/matthewlang22/" target="_blank">
-      <img src="/media/linkedin.png" alt="LinkedIn">
-    </a>
+  <!-- Main Content -->
+  <main class="page">
 
-    <a class="github-btn" href="https://github.com/MatthewLang22" target="_blank">
-      <img src="/media/github.png" alt="GitHub">
-    </a>
+    <!-- Section 1: Prompt -->
+    <section class="prompt">
+      <div class="section-text">
+        <h2>Prompt:</h2>
+        <p>
+          Imagine you are in the batting cages as a RHH is preparing to come in and face Tanner Scott. What information would you give him / coaches?
+        </p>
+      </div>
+    </section>
 
-    <a class="email-btn" href="mailto:matthewlang2000@gmail.com" target="_blank">
-      <img src="/media/email.png" alt="Email">
-    </a>
-  </div>
+    <!-- Section 2: Overall Report Summary -->
+    <section class="summary">
+      <div class="section-text">
+        <h2>Overall Report Summary:</h2>
+        <p>
+           “Tanner Scott wants chases on sliders down and away. Be disciplined early, hunt the fastball in the zone, and only expand with two strikes.”
+        </p>
+      </div>
+    </section>
 
-</div>
+    <!-- Section 3: Pitch type Chart -->
+    <section class="pitchtypes">
+      <div class="section-text">
+        <h2>1.) Pitch Type Chart</h2>
+        <p>
+           This chart shows Scott's pitch arsenal, average MPH, and percentage thrown to righty hitters. He only throws 2 pitches - and has above average in velo for both.
+        </p>
+      </div>
+      <div class="PitchesChartPic">
+        <img src="/media/scott-pitches.png" alt="Pitches Chart">
+      </div>
+    </section>
 
-<!-- Main Content -->
+    <!-- Section 4: Strike Zone Heat Map -->
+    <section class="zoneheatmap">
+      <div class="section-text">
+        <h2>2.) Strike Zone Heatmap</h2>
+        <p>
+           This is a heatmap of Tanner Scott’s pitches to right handed hitters. His fastball lives mostly middle-up and away, and he locates his slider down and away.
+        </p>
+      </div>
+      <div class="heatmappic">
+        <img src="/media/scott-heatmap.png" alt="Pitches Heatmap">
+      </div>
+    </section>
 
+    <!-- Section 5: Movement Profile Visualization -->
+    <section class="profile">
+      <div class="section-text">
+        <h2>3.) Movement Profile Visualization</h2>
+        <p>
+          This graphic shows Scott's arm angle and the break direction of his pitches. Fastballs are red, sliders are yellow. He has roughly a ¾ arm slot, his fastball stays up, and his slider breaks in.
+        </p>
+      </div>
+      <div class="movementprofilepic">
+        <img src="/media/scott-profile.png" alt="Pitches Heatmap">
+      </div>
+    </section>
+
+    <!-- Section 5: Walk Rate Note -->
+    <section class="walkrate">
+      <div class="section-text">
+        <h2>4.) Walk Rate Note</h2>
+        <p>
+          In 2024, Tanner Scott was in the 7th percentile for walk rate - can be wild at times. Be selective until you get two strikes (protect mode). 
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Chase Rate Note -->
+    <section class="chaserate">
+      <div class="section-text">
+        <h2>5.) Chase Rate Note</h2>
+        <p>
+          Scott thrives on batters chasing at pitches not in the strike zone - specifically a 41.4% slider chase rate. Do not chase a low and away slider - wait for either a fastball in the strike zone or a hanging slider in the zone.
+        </p>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>
