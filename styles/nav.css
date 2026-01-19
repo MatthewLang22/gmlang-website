@@ -82,24 +82,31 @@
 
 /* Shared button styles */
 .linkedin-btn,
-.github-btn {
+.github-btn, 
+.email-btn {
   width: 32px;
   height: 32px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+  padding: 0;
+  background: transparent;
 }
 
 .linkedin-btn img,
-.github-btn img {
-  width: 100%;
-  height: auto;
+.github-btn img,
+.email-btn img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;          /* remove inline spacing */
+  object-fit: contain;     /* ensures the whole icon fits inside button */
   opacity: 0.85;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .linkedin-btn:hover img,
-.github-btn:hover img {
+.github-btn:hover img,
+.email-btn:hover img{
   transform: scale(1.1);
   opacity: 1;
 }
