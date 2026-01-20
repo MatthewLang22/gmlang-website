@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pitcher Performance Analysis | GMLang.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/pitcheranalysis.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <!-- LEFT SIDE -->
+    <div class="nav-left">
+      <li><a href="/">Home ⛊</a></li>
+
+      <!-- Portfolio Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-btn">Portfolio ▼</span>
+        <div class="dropdown-content">
+          <a href="/hittingreport">Run Creation Analysis & Matchup Strategy</a>
+          <a href="/hittingreport">In-Game Decision Analysis I</a>
+          <a href="/hittingreport">In-Game Decision Analysis II</a>
+          <a href="/hittingreport">Pitcher Performance Analysis</a>
+          <a href="/hittingreport">ABS Challenge Strategy</a>
+          <a href="/hittingreport">Pinch-Hit Hitting Report</a>
+        </div>
+      </div>
+
+      <li><a href="/resume">Resume</a></li>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <!-- Right Aligned -- Social Media Buttons -->
+    <div class="social-buttons">
+      <a class="linkedin-btn" href="https://www.linkedin.com/in/matthewlang22/" target="_blank">
+        <img src="/media/linkedin.png" alt="LinkedIn">
+      </a>
+      <a class="github-btn" href="https://github.com/MatthewLang22" target="_blank">
+        <img src="/media/github.png" alt="GitHub">
+      </a>
+      <a class="email-btn" href="mailto:matthewlang2000@gmail.com" target="_blank">
+        <img src="/media/email.png" alt="Email">
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="page">
+
+    <!-- Section 1: Prompt -->
+    <section class="prompt">
+      <div class="section-text">
+        <h2>Prompt:</h2>
+        <p>
+            After a strong run of performance over ’22-‘24, Zac Gallen’s results were worse in 2025. What changed? What, if any, recommendations would you make to his pitching coach to get him back on track?
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Situation-->
+    <section class="situation">
+      <div class="section-text">
+        <p>
+            Surface level pitching stats (shown in the table) indicate that Zac Gallen had a strong performance in 2022 - 2024, followed by a worse 2025:
+        </p>
+      </div>
+      <div class="yeartable">
+        <img src="/media/yearstatstable.png" alt="Surface Level Pitching Stats Table">
+      </div>
+    </section>
+
+    <!-- Section 3: General Strategy Considerations -->
+    <section class="general">
+      <div class="section-text">
+        <p>
+            However, wins, losses, and ERA alone do not fully describe the quality of a pitcher’s season. To understand what changed, it’s useful to look at Gallen’s advanced metrics from 2022–2025. In this heatmap, green cells indicate his strongest seasons in specific categories, while red cells indicate his worst.
+        </p>
+      </div>
+      <div class="heatmap">
+        <img src="/media/gallen-heatmap.png" alt="Surface Level Pitching Stats Table">
+      </div>
+    </section>
+
+    <!-- Section 4: Decision 1 -->
+    <section class="decision1">
+      <div class="section-text">
+        <p>
+           It’s clear that 2022 was his best season, and since then he has shown regression across almost every major metric. His xBA, xSLG, xwOBA, and xERA all spiked in 2023 and remained elevated through 2024 and 2025. In 2024, his walk % increased and stayed high, and in 2025 his strikeout rate dropped significantly, leading to the question: What changed in his pitch repertoire from 2022 to 2025? This is shown in the table below:
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Decision 2 -->
+    <section class="decision2">
+      <div class="heatmap">
+        <img src="/media/pitchtype-table.png" alt="Surface Level Pitching Stats Table">
+      </div>
+    </section>
+
+    <!-- Section 5: Decision 3 -->
+    <section class="decision3">
+      <div class="section-text">
+        <p>
+          Based on the pitch-level data, here are the key adjustments recommended to improve Gallen’s performance in 2026:
+        </p>
+        <p>
+          1.) Reevaluate the cutter. In 2025, Gallen’s cutter was easily his least effective pitch. It produced a .357 xBA, .664 xSLG, and .449 xwOBA, by far his worst marks. By comparison, in 2022 the cutter performed much better (.242 xBA, .348 xSLG, .285 xwOBA). This suggests a degradation in either movement profile or consistency. Explore alternative cutter grips or adjust usage locations — elevate, backdoor, etc.
+        </p>
+        <p>
+          2.) Improve the four-seam fastball. Gallen’s four-seam fastball in 2025 showed a noticeable decline in both velocity and spin rate compared to 2022. This deterioration correlates directly with his worse results (higher xBA, xSLG, xwOBA, and lower whiff%). This pitch has historically been the foundation of his arsenal, so its decline is particularly impactful. Video should be viewed for changes in mechanics: arm slot, late rotation, and finger placement.
+        </p>
+        <p>
+          3.) Eliminate sinker from repertoire. The 2025 sinker was not only ineffective, it was harmful. It had the worst in-zone percentage, likely contributing to a higher walk rate. It had a lower spin rate and worse batted-ball metrics than his four-seam fastball, which produced poor outcomes despite limited usage.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
